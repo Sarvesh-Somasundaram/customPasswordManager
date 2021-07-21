@@ -14,7 +14,7 @@ def store_passwords(password, user_email, username, url, app_name):
 
 def connect():
     try:
-        connection = psycopg2.connect(database='passwordmanager')
+        connection = psycopg2.connect(database='passwordmanager', user = 'postgres', password = 'red123')
         return connection
     except (Exception, psycopg2.Error) as error:
         print(error)
